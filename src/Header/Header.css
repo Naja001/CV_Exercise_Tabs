@@ -1,0 +1,20 @@
+img{
+    border-radius: 50%;
+}
+div.container-fluid{
+    background-color: rgb(87, 126, 104);
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.contrainer-color{
+    background-color: rgb(52, 95, 73);
+    
+}
+.row{
+    padding-top: 20px;
+    padding-bottom: 20px;  }
+#header{
+    color: white;
+}
+
+
