@@ -23,7 +23,7 @@ export default function Header() {
         </div>
         <div className="col-md-auto">
           <img
-            src="https://www.shutterstock.com/image-photo/young-asian-woman-professional-entrepreneur-600nw-2127014192.jpg"
+            src="women.jpg"
             width="300px"
             height="auto"
           />
