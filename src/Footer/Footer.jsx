@@ -1,8 +1,8 @@
 import { AWARDS } from "../data";
-import './Footer.css'
+import "./Footer.css";
 export default function Footer() {
   return (
-    <footer  className="row justify-content-md-center">
+    <footer className="row justify-content-md-center">
       <div className="col col-lg-2">
         <h4>Skills: </h4>
         <ul>
@@ -11,7 +11,9 @@ export default function Footer() {
           <li>Budgeting and Cost Analysis</li>
           <li>Enterprise Resource Planning</li>
           <li>Staff and User Training</li>
-          <li>Process Improvement</li>
+          <li>
+            Process Improvement .
+          </li>
         </ul>
       </div>
       <div className="col-md-auto">

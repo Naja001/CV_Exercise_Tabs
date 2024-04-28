@@ -3,6 +3,7 @@ import Content from "./Content.jsx";
 import { EDUCATION_DATA, EXPERIENCE_DATA } from "../data.js";
 import Education from "./Education.jsx";
 
+
 export default function Experience() {
   return (
     <div id="experience" className="container">
@@ -23,8 +24,8 @@ export default function Experience() {
       <hr id="line" />
       <div>
         <div className="row">
-        <h1>EDUCATIONAL HISTORY</h1>
-        <br/>
+          <h1>EDUCATIONAL HISTORY</h1>
+          <br />
           <ul style={{ listStyle: "none" }}>
             {EDUCATION_DATA.map((item) => (
               <li key={item.place}>
