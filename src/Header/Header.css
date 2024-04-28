@@ -17,4 +17,8 @@ div.container-fluid{
     color: white;
 }
 
-
+@media all and (max-width: 360px){
+    .mleft20{
+        margin-left: 20px;
+     }
+}
