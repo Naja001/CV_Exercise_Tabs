@@ -1,0 +1,22 @@
+#line {
+  border: 2px solid rgb(69, 83, 76);
+}
+#experience {
+  color: rgb(56, 60, 58);
+}
+.button-container {
+  display: flex;
+}
+
+.button-container button {
+  margin-right: 10px; /* Adjust as needed */
+}
+.btn.btn-primary{
+  margin-top: 20px;
+  background-color:rgb(70, 140, 98);
+  border: 2px solid #4b9562;  
+}
+.btn.btn-primary:hover{
+  background-color:rgb(88, 173, 122);
+  border: 2px solid #4b9562;  
+}

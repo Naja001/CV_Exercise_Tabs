@@ -1,44 +1,47 @@
-import "./Experience.css";
-import Content from "./Content.jsx";
-import { EDUCATION_DATA, EXPERIENCE_DATA } from "../data.js";
-import Education from "./Education.jsx";
-
+import "./style.css";
+import { useState } from "react";
+import { DATA } from "../data.js";
+import TabContent from "./TabContent.jsx";
 
 export default function Experience() {
+  const [selectedTopic, setSelectedTopic] = useState("experience");
+
+  function handleSelect(selectedBtn) {
+    setSelectedTopic(selectedBtn);
+  }
   return (
-    <div id="experience" className="container">
-      <div className="row">
-        <h1>Work Experience</h1>
-        <ul style={{ listStyle: "none" }}>
-          {EXPERIENCE_DATA.map((item) => (
-            <li key={item.title}>
-              <Content
-                title={item.title}
-                description={item.desc}
-                year={item.year}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-      <hr id="line" />
-      <div>
-        <div className="row">
-          <h1>EDUCATIONAL HISTORY</h1>
-          <br />
-          <ul style={{ listStyle: "none" }}>
-            {EDUCATION_DATA.map((item) => (
-              <li key={item.place}>
-                <Education
-                  place={item.place}
-                  degree={item.degree}
-                  year={item.year}
-                  desc={item.desc}
-                />
-              </li>
+    <div className="container">
+      <div className="button-container">
+        
+          <TabContent onSelect={() => handleSelect("experience")}>
+            Experience
+          </TabContent>
+       
+       
+          <TabContent onSelect={() => handleSelect("education")}>
+            Education
+          </TabContent>
+          </div>
+<div className="row">
+{!selectedTopic ? (
+          <p>Please select a topic</p>
+        ) : (
+          <div>
+            {DATA[selectedTopic].map((item, index) => (
+              <div key={index}>
+                <h3>{item.title}</h3>
+                <h5>{item.year}</h5>
+                <ul>
+                  {item.desc.map((descItem, descIndex) => (
+                    <li key={descIndex}>{descItem}</li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
-        </div>
+          </div>
+        )}
+
+        
       </div>
     </div>
   );
